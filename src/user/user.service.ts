@@ -28,4 +28,10 @@ export class UserService {
 
     return this.userRepository.save(user);
   }
+
+  // src/user/user.service.ts
+async findByEmail(email: string) {
+  return this.userRepository.findOne({ where: { email } });
+}
+
 }
